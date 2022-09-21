@@ -1,8 +1,8 @@
 const flatten = function(nestedArray) {
   let returnArray = [];
-  for (let item of nestedArray) {
+  for (const item of nestedArray) {
     if (Array.isArray(item)) {
-      for (nestedItem of item) {
+      for (const nestedItem of item) {
         returnArray.push(nestedItem);
       }
     } else {
