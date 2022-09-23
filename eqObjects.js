@@ -17,18 +17,13 @@ const eqObjects = function(object1, object2) {
 };
 
 const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
   for (let i = 0; i < array1.length; i++) {
+    if (Array.isArray(array1[i])) {
+      return eqArrays(array1[i], array2[i]);
+    }
     if (array1[i] !== array2[i]) {
       return false;
     }
   }
   return true;
 };
-
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
-
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
-console.log(eqObjects({ a: { y: {z: 1}}, b: 2 }, { a: { y: {z: 1 }}, b: 2 })); // => true
