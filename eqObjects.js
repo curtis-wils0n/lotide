@@ -4,6 +4,9 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   for (const singleKey of keys1) {
+    if (typeof object1[singleKey] === 'object') {
+      return eqObjects(object1[singleKey], object2[singleKey]);
+    }
     if (Array.isArray(object1[singleKey]) || Array.isArray(object2[singleKey])) {
       return eqArrays(object1[singleKey], object2[singleKey]);
     } else if (object1[singleKey] !== object2[singleKey]) {
@@ -24,3 +27,8 @@ const eqArrays = function(array1, array2) {
   }
   return true;
 };
+
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
+
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
+console.log(eqObjects({ a: { y: {z: 1}}, b: 2 }, { a: { y: {z: 1 }}, b: 2 })); // => true
