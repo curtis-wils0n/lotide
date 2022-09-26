@@ -8,3 +8,5 @@ const middle = function(array) {
   }
   return outputArray;
 };
+
+module.exports = middle;
