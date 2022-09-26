@@ -1,11 +1,11 @@
-const letterPositions = function(sentence) {
+const letterPositions = function(string) {
   const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i] !== ' ') {
-      if (results[sentence[i]]) {
-        results[sentence[i]].push(i);
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] !== ' ') {
+      if (results[string[i]]) {
+        results[string[i]].push(i);
       } else {
-        results[sentence[i]] = [i];
+        results[string[i]] = [i];
       }
     }
   }

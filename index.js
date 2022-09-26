@@ -3,12 +3,13 @@ const head =                require('./head');
 const tail =                require('./tail');
 const middle =              require('./middle');
 const countOnly =           require('./countOnly');
-const findKey =             require('./findKey');
-const findKeyByValue =      require('./findKeyByValue');
 const flatten =             require('./flatten');
 const map =                 require('./map');
 const takeUntil =           require('./takeUntil');
 const without =             require('./without');
+//Object functions
+const findKey =             require('./findKey');
+const findKeyByValue =      require('./findKeyByValue');
 //String functions
 const countLetters =        require('./countLetters');
 const letterPositions =     require('./letterPositions');
@@ -25,12 +26,12 @@ module.exports = {
   tail,
   middle,
   countOnly,
-  findKey,
-  findKeyByValue,
   flatten,
   map,
   takeUntil,
   without,
+  findKey,
+  findKeyByValue,
   countLetters,
   letterPositions,
   eqArrays,
