@@ -3,3 +3,5 @@ const tail = function(inputArray) {
   cloneArray.shift();
   return cloneArray;
 };
+
+module.exports = tail;
