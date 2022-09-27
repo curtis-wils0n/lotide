@@ -2,9 +2,7 @@ const flatten = function(nestedArray) {
   let returnArray = [];
   for (const item of nestedArray) {
     if (Array.isArray(item)) {
-      for (const nestedItem of item) {
-        returnArray.push(nestedItem);
-      }
+      returnArray.push(...flatten(item)); //Spread syntax from https://bobbyhadz.com/blog/javascript-append-one-array-to-another-array
     } else {
       returnArray.push(item);
     }

@@ -36,7 +36,7 @@ The following functions are currently implemented:
 
 `countOnly(array, itemsToCount)`: Receives an array of values and an object containing search keys with true and false values. Returns an object with a count per how many true-valued keys were found in the array.
 
-`flatten(nestedArray)`: Returns a one-dimensional array from the provided array of nested values (works with only one level of nesting. Will implement recursive solution for handling any level of nesting in the future).
+`flatten(nestedArray)`: Returns a one-dimensional array from the provided array of nested values. Works with any level of nesting.
 
 `map(array, callback)`: Returns a mutation of the provided array based on the results of the provided callback function.
 
@@ -69,3 +69,10 @@ The following functions are currently implemented:
 `assertArraysEqual(actual, expected)`: Returns *true* or *false* based on strict equality of arrays provided and logs an assertion message to the console.
 
 `assertObjectsEqual(actual, expected)`: Returns *true* or *false* based on strict equality of objects provided and logs an assertion message to the console.
+
+# Updates
+
+## 1.0.1
+
+- Made `flatten` recursive to handle any level of array nesting.
+- Developed more robust tests in the `test/` directory.
